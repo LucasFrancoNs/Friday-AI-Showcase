@@ -6,6 +6,8 @@
 ![Architecture](https://img.shields.io/badge/architecture-local--first-67e8f9)
 ![License](https://img.shields.io/badge/license-showcase%20%2F%20all%20rights%20reserved-64748b)
 
+[![Live Demo](https://img.shields.io/badge/LIVE%20DEMO-Open%20HUD-22d3ee?style=for-the-badge)](https://lucasfrancons.github.io/Friday-AI-Showcase/)
+
 > A local-first experimental AI agent architecture focused on modular capabilities, deterministic diagnostics, sandboxed code workflows, security boundaries and long-session resilience.
 
 <p align="center">
@@ -42,7 +44,7 @@ Instead of exposing every integration and tool to a model, Friday routes the req
 
 ## Holographic HUD
 
-Open `index.html` locally to run the zero-dependency browser demo:
+Open the **[Live Demo](https://lucasfrancons.github.io/Friday-AI-Showcase/)** or run the zero-dependency browser demo locally:
 
 ```bash
 git clone https://github.com/LucasFrancoNs/Friday-AI-Showcase.git
