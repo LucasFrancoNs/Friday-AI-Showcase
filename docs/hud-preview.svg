@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 760" role="img" aria-labelledby="title desc">
+<title id="title">Friday Autonomous Systems Interface HUD preview</title>
+<desc id="desc">Original futuristic holographic interface for the Friday AI public showcase.</desc>
+<defs>
+  <radialGradient id="bg" cx="50%" cy="45%" r="70%"><stop offset="0" stop-color="#0b2a36"/><stop offset=".45" stop-color="#06131b"/><stop offset="1" stop-color="#02070a"/></radialGradient>
+  <linearGradient id="cyan" x1="0" x2="1"><stop stop-color="#38bdf8"/><stop offset="1" stop-color="#67e8f9"/></linearGradient>
+  <filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#67e8f9" stroke-opacity=".05"/></pattern>
+</defs>
+<rect width="1400" height="760" fill="url(#bg)"/>
+<rect width="1400" height="760" fill="url(#grid)"/>
+<g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#dffbff">
+  <rect x="34" y="28" width="1332" height="68" rx="8" fill="#061822" fill-opacity=".82" stroke="#67e8f9" stroke-opacity=".25"/>
+  <text x="66" y="70" font-size="24" font-weight="700" letter-spacing="7" fill="#67e8f9">FRIDAY</text>
+  <text x="238" y="70" font-size="12" letter-spacing="3" fill="#77b9c4">AUTONOMOUS SYSTEMS INTERFACE</text>
+  <circle cx="1190" cy="61" r="6" fill="#7df9d2" filter="url(#glow)"/>
+  <text x="1206" y="66" font-size="12" letter-spacing="2" fill="#9ff7e4">SYSTEM ONLINE</text>
+
+  <rect x="34" y="120" width="292" height="554" rx="10" fill="#061822" fill-opacity=".66" stroke="#67e8f9" stroke-opacity=".22"/>
+  <text x="60" y="156" font-size="12" letter-spacing="3" fill="#67e8f9">CORE MODULES</text>
+  <g font-size="12">
+    <text x="60" y="200">CAPABILITY ROUTER</text><text x="250" y="200" fill="#9ff7e4">ONLINE</text>
+    <text x="60" y="242">DOCTOR</text><text x="250" y="242" fill="#9ff7e4">READY</text>
+    <text x="60" y="284">DEBUGGER</text><text x="250" y="284" fill="#9ff7e4">READY</text>
+    <text x="60" y="326">SELF-HEALING</text><text x="250" y="326" fill="#9ff7e4">SAFE</text>
+    <text x="60" y="368">SANDBOX</text><text x="250" y="368" fill="#9ff7e4">GATED</text>
+    <text x="60" y="410">DEFENDER</text><text x="250" y="410" fill="#9ff7e4">ACTIVE</text>
+  </g>
+  <text x="60" y="480" font-size="11" fill="#7bb8c2">CPU</text>
+  <rect x="104" y="468" width="150" height="6" fill="#12313d"/><rect x="104" y="468" width="52" height="6" fill="url(#cyan)" filter="url(#glow)"/>
+  <text x="270" y="478" font-size="11" fill="#7bb8c2">24%</text>
+  <text x="60" y="528" font-size="11" fill="#7bb8c2">RAM</text>
+  <rect x="104" y="516" width="150" height="6" fill="#12313d"/><rect x="104" y="516" width="72" height="6" fill="url(#cyan)" filter="url(#glow)"/>
+  <text x="270" y="526" font-size="11" fill="#7bb8c2">41%</text>
+
+  <g transform="translate(698 397)">
+    <circle r="205" fill="none" stroke="#67e8f9" stroke-opacity=".14"/>
+    <circle r="158" fill="none" stroke="#67e8f9" stroke-opacity=".24" stroke-dasharray="8 10"/>
+    <circle r="118" fill="#08212b" fill-opacity=".74" stroke="#67e8f9" stroke-opacity=".8" filter="url(#glow)"/>
+    <circle r="82" fill="#07171e" stroke="#67e8f9" stroke-opacity=".4" stroke-dasharray="5 7"/>
+    <path d="M0-225A225 225 0 0 1 214-70" fill="none" stroke="#67e8f9" stroke-width="5" stroke-linecap="round" filter="url(#glow)"/>
+    <path d="M-175 0A175 175 0 0 0 35 171" fill="none" stroke="#38bdf8" stroke-opacity=".65" stroke-width="2"/>
+    <text x="0" y="-18" text-anchor="middle" font-size="12" letter-spacing="3" fill="#7bb8c2">FRIDAY CORE</text>
+    <text x="0" y="28" text-anchor="middle" font-size="48" font-weight="200">97.4</text>
+    <text x="0" y="56" text-anchor="middle" font-size="10" letter-spacing="3" fill="#7bb8c2">INTEGRITY %</text>
+  </g>
+
+  <g font-size="10" letter-spacing="2" fill="#80d8e5">
+    <text x="475" y="214">POLICY</text><text x="870" y="240">ROUTER</text><text x="476" y="588">MEMORY</text><text x="864" y="604">SANDBOX</text>
+  </g>
+
+  <rect x="1074" y="120" width="292" height="554" rx="10" fill="#061822" fill-opacity=".66" stroke="#67e8f9" stroke-opacity=".22"/>
+  <text x="1100" y="156" font-size="12" letter-spacing="3" fill="#67e8f9">ACTIVE AGENTS</text>
+  <g font-size="11">
+    <text x="1100" y="202">RESEARCHER</text><text x="1264" y="202" fill="#9ff7e4">STANDBY</text>
+    <text x="1100" y="246">DEVELOPER</text><text x="1264" y="246" fill="#9ff7e4">SANDBOX</text>
+    <text x="1100" y="290">TESTER</text><text x="1264" y="290" fill="#9ff7e4">READY</text>
+    <text x="1100" y="334">REVIEWER</text><text x="1264" y="334" fill="#9ff7e4">READY</text>
+  </g>
+  <text x="1100" y="400" font-size="12" letter-spacing="3" fill="#67e8f9">SECURITY</text>
+  <text x="1100" y="458" font-size="48" font-weight="200" fill="#8ff3ff">0</text>
+  <text x="1150" y="456" font-size="10" letter-spacing="2" fill="#7bb8c2">OPEN CIRCUITS</text>
+  <g font-size="9" fill="#7cb7c1">
+    <text x="1100" y="520">01  policy.engine // no privilege escalation</text>
+    <text x="1100" y="548">02  defender // baseline verified</text>
+    <text x="1100" y="576">03  router // lazy capabilities enabled</text>
+    <text x="1100" y="604">04  context // bounded session active</text>
+  </g>
+</g>
+</svg>
