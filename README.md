@@ -1,93 +1,117 @@
 # FRIDAY // Autonomous Systems Interface
 
+[![tests](https://github.com/LucasFrancoNs/Friday-AI-Showcase/actions/workflows/tests.yml/badge.svg)](https://github.com/LucasFrancoNs/Friday-AI-Showcase/actions/workflows/tests.yml)
+![Python](https://img.shields.io/badge/Python-3.12%2B-3776AB?logo=python&logoColor=white)
+![Status](https://img.shields.io/badge/status-experimental-22d3ee)
+![Architecture](https://img.shields.io/badge/architecture-local--first-67e8f9)
+![License](https://img.shields.io/badge/license-showcase%20%2F%20all%20rights%20reserved-64748b)
+
 > A local-first experimental AI agent architecture focused on modular capabilities, deterministic diagnostics, sandboxed code workflows, security boundaries and long-session resilience.
 
-**Friday-AI-Showcase** is the public, sanitized portfolio edition of my personal Friday AI project. It intentionally does **not** include private credentials, personal memory, character/Live2D assets, private integrations, or full device-control internals.
+<p align="center">
+  <img src="docs/hud-preview.svg" alt="Friday holographic HUD preview" width="100%">
+</p>
 
-The public UI uses an **original holographic systems HUD**. It is inspired by general science-fiction interface design; it is not affiliated with or a reproduction of Marvel/JARVIS.
+**Friday-AI-Showcase** is the public, sanitized portfolio edition of my personal Friday AI project. It intentionally excludes credentials, personal memory, character/Live2D assets, private account integrations, and the full device-control runtime.
 
-## Live-style HUD demo
+The public interface uses an **original holographic systems HUD** inspired by general science-fiction UI language. It is not affiliated with, endorsed by, or a reproduction of Marvel/JARVIS.
 
-Open [`index.html`](index.html) locally to view the zero-dependency holographic interface. It visualizes the architecture rather than controlling your computer.
-
-```text
-FRIDAY
-  |
-  +-- Capability Router
-  +-- Policy / Security Engine
-  +-- Doctor + Debugger
-  +-- Self-Healing
-  +-- Sandbox Gate
-  +-- Dynamic Agent Teams
-  +-- Defender / Performance Guard
-  +-- Session Context Resilience
-  +-- Web Repair
-```
-
-## Why this architecture exists
-
-The goal is **not** to give one model every tool all the time. Friday tries to stay large in capability but small during each task:
+## What Friday demonstrates
 
 ```text
-request
-  -> route intent
-  -> expose only relevant capabilities
-  -> enforce policy
-  -> run deterministic tools first
-  -> use a model only when reasoning is actually needed
+User Goal
+   |
+Capability Router
+   |
+Policy / Provenance Gate
+   |
++----------------------+----------------------+-------------------+
+|                      |                      |                   |
+Doctor / Debugger   Dynamic Agents        Self-Healing        Sandbox
+|                      |                      |                   |
++----------------------+----------+-----------+-------------------+
+                                  |
+                              Reviewer
+                                  |
+                           Explicit Promotion
 ```
+
+The central idea is simple: **be large in capability, but small during each task**.
+
+Instead of exposing every integration and tool to a model, Friday routes the request first, loads only the relevant capability bundle, enforces policy, and prefers deterministic systems before escalating to an LLM.
+
+## Holographic HUD
+
+Open `index.html` locally to run the zero-dependency browser demo:
+
+```bash
+git clone https://github.com/LucasFrancoNs/Friday-AI-Showcase.git
+cd Friday-AI-Showcase
+```
+
+Then open `index.html` in a browser.
+
+The HUD currently visualizes Core status, Capability Router, Doctor, Debugger, Self-Healing, Sandbox, Defender, active agent roles, circuit status and synthetic resource telemetry.
+
+A GitHub Pages workflow is already prepared in `.github/workflows/pages.yml`. Once Pages is enabled for this repository, the HUD can be published as a live web demo.
 
 ## Public demo modules
 
-| Module | What it demonstrates |
+| Module | Demonstrates |
 |---|---|
-| `capability_router.py` | deterministic small-bundle routing |
-| `doctor.py` | local Python structural checks |
-| `context_manager.py` | bounded deterministic session compaction |
-| `web_repair.py` | conservative high-confidence HTML repair |
-| `index.html` | original holographic Friday HUD |
+| `friday_open/capability_router.py` | deterministic small-bundle routing |
+| `friday_open/doctor.py` | local Python structural checks |
+| `friday_open/context_manager.py` | bounded deterministic session compaction |
+| `friday_open/web_repair.py` | conservative high-confidence HTML repair |
+| `index.html` + `styles.css` | original holographic Friday HUD |
 
-These are deliberately smaller public implementations. The private project contains the broader experimental runtime.
+These are intentionally smaller public implementations. The private Friday repository contains the broader experimental runtime.
 
-## Engineering themes
+## Engineering principles
 
-- **Deterministic-first Doctor / Debugger** — common structural errors do not need an LLM.
-- **Local-first model strategy** — sensitive workflows can prefer local inference.
-- **Capability routing + lazy loading** — avoid exposing/loading the whole agent at once.
-- **Dynamic teams with fixed permission profiles** — roles can be dynamic; privileges cannot invent themselves.
-- **Sandbox-first coding** — AI-generated code belongs in staging before promotion.
-- **Prompt-injection defense** — external content is data, not authorization.
-- **Defender + performance guard** — integrity and resource regressions are measurable.
-- **Chaos testing** — intentionally stress routing, memory, budgets and failing components.
-- **Context resilience** — long sessions are bounded without silently deleting recent turns.
+**Deterministic first.** Common structural errors, context management, routing and many safety checks should not require an LLM.
 
-## Quick test
+**Local first.** Sensitive workflows can prefer local inference instead of automatically escalating to a cloud model.
+
+**Capability routing + lazy loading.** Friday should not load or expose its whole feature set for every request.
+
+**Data is not authorization.** A webpage, document, email or screen can provide information, but it cannot grant itself permission to execute a risky action.
+
+**Sandbox-first coding.** AI-generated code belongs in staging before it reaches the real project.
+
+**Fixed permission profiles for dynamic roles.** Agents may be created dynamically, but their privileges come from a versioned registry.
+
+**Measured resilience.** Defender, Performance Guard, circuit breakers and Chaos tests exist so growth is measured rather than guessed.
+
+## Tests
 
 ```bash
 python -m pip install -r requirements-dev.txt
 python -m pytest -q
 ```
 
-The browser HUD has no package dependencies: open `index.html` directly.
+The browser HUD itself has no package dependencies.
 
-## Repository boundaries
+## Public / private boundary
 
-Not published here:
+This repository does **not** publish API keys, `.env`/ `key.env`, cookies, authentication material, personal memory, conversation history, logs, checkpoints, private account integrations, personal device configuration or Live2D character assets.
 
-- API keys / `.env` / `key.env`
-- cookies or authentication material
-- personal memory and conversation history
-- logs/checkpoints/runtime artifacts
-- private automation and account integrations
-- Live2D character/model assets
-- personal device configuration
+See [SECURITY.md](SECURITY.md) and [docs/SECURITY.md](docs/SECURITY.md) for the public security boundary.
 
-## Evolution
+## Project evolution
 
-The private project evolved through several engineering milestones: Doctor/Debugger, Policy Engine, autonomous loops, capability routing, dynamic teams, self-healing, prompt-injection defense, sandbox gating, strategic autonomy, Defender/Performance Guard, Chaos Lab and context resilience.
+The private Friday project has evolved through Doctor/Debugger, Policy Engine, autonomous loops, Capability Routing, Dynamic Agent Teams, Self-Healing, Prompt Injection Defense, Sandbox Gate, Strategic Autonomy, Defender/Performance Guard, Chaos Evaluation and Context Resilience.
 
-This repository presents those ideas as a clean portfolio/open-core surface rather than publishing every private implementation detail.
+This repository presents the architecture as a **clean portfolio showcase** rather than publishing every private implementation detail.
+
+## Documentation
+
+- [Architecture](docs/ARCHITECTURE.md)
+- [Security model](docs/SECURITY.md)
+- [Public roadmap](docs/ROADMAP.md)
+- [Contributing](CONTRIBUTING.md)
+- [License](LICENSE.md)
 
 ## Author
 
-Built by **Lucas Franco** as a long-term personal AI/agent engineering project.
+Built by **Lucas Franco** as a long-term personal AI / agent engineering project.
