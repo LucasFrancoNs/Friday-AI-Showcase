@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#061118" />
+  <title>FRIDAY // Autonomous Systems Interface</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="noise"></div>
+  <main class="hud" aria-label="Friday holographic systems interface demo">
+    <header class="topbar glass">
+      <div><span class="mark">F//</span><strong>FRIDAY</strong><small>AUTONOMOUS SYSTEMS INTERFACE</small></div>
+      <div class="status"><span class="dot"></span> SYSTEM ONLINE <span id="clock"></span></div>
+    </header>
+
+    <section class="grid">
+      <aside class="panel glass left-panel">
+        <h2>CORE MODULES</h2>
+        <div class="module"><span>CAPABILITY ROUTER</span><b>ONLINE</b></div>
+        <div class="module"><span>DOCTOR</span><b>READY</b></div>
+        <div class="module"><span>DEBUGGER</span><b>READY</b></div>
+        <div class="module"><span>SELF-HEALING</span><b>SAFE</b></div>
+        <div class="module"><span>SANDBOX</span><b>GATED</b></div>
+        <div class="module"><span>DEFENDER</span><b>ACTIVE</b></div>
+        <div class="meter-row"><label>CPU</label><div class="meter"><i id="cpu"></i></div><em id="cpuText">24%</em></div>
+        <div class="meter-row"><label>RAM</label><div class="meter"><i id="ram"></i></div><em id="ramText">41%</em></div>
+      </aside>
+
+      <section class="core-stage">
+        <div class="orbit orbit-a"></div>
+        <div class="orbit orbit-b"></div>
+        <div class="orbit orbit-c"></div>
+        <div class="scanner"></div>
+        <div class="core-ring">
+          <div class="core-inner">
+            <span>FRIDAY CORE</span>
+            <strong id="coreValue">97.4</strong>
+            <small>INTEGRITY %</small>
+          </div>
+        </div>
+        <div class="pulse-label one">POLICY</div>
+        <div class="pulse-label two">ROUTER</div>
+        <div class="pulse-label three">MEMORY</div>
+        <div class="pulse-label four">SANDBOX</div>
+      </section>
+
+      <aside class="panel glass right-panel">
+        <h2>ACTIVE AGENTS</h2>
+        <div id="agents" class="agents"></div>
+        <h2>SECURITY</h2>
+        <div class="security-score"><strong>0</strong><span>OPEN CIRCUITS</span></div>
+        <div class="event-log" id="eventLog"></div>
+      </aside>
+    </section>
+
+    <footer class="bottom glass">
+      <div class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <div><span>LOCAL-FIRST</span><span>DETERMINISTIC-FIRST</span><span>LAZY CAPABILITIES</span></div>
+    </footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
